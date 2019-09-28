@@ -1,45 +1,48 @@
-plugins{
+plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-android-extensions")
     id("kotlin-kapt")
 }
 
-android{
+android {
     compileSdkVersion(Releases.targetSdkVersion)
     buildToolsVersion = Releases.buildToolsVersion
 
-    defaultConfig{
+    defaultConfig {
         applicationId = ApplicationId.id
         minSdkVersion(Releases.minSdkVersion)
         targetSdkVersion(Releases.targetSdkVersion)
         versionCode = Releases.versionCode
         versionName = Releases.versionName
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/\"")
+        buildConfigField("String", "API_KEY", "\"00fadd6af89412de4c1a3ecd7fe631f6/\"")
     }
-    buildTypes{
-        getByName("release"){
+    buildTypes {
+        getByName("release") {
             isMinifyEnabled = false
         }
     }
     packagingOptions.exclude("META-INF/main.kotlin_module")
 }
 
-dependencies{
+dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Version.kotlin}")
 
-    with(AndroidSupport){
+    with(AndroidSupport) {
         implementation(v4)
         implementation(cardview)
         implementation(recyclerview)
         implementation(design)
         implementation(appCompat)
         implementation(constraintLayout)
+        implementation(legacy)
     }
 
-    with(Retrofit){
+    with(Retrofit) {
         implementation(retrofit)
         implementation(gson)
         implementation(gsonConverter)
@@ -47,7 +50,7 @@ dependencies{
         implementation(rxAdapter)
     }
 
-    with(Dagger){
+    with(Dagger) {
         implementation(dagger)
         kapt(compiler)
         implementation(android)
@@ -55,30 +58,31 @@ dependencies{
         kapt(processor)
     }
 
-    with(Reactivex){
+    with(Reactivex) {
         implementation(java)
         implementation(android)
     }
 
-    with(Facebook){
+    with(Facebook) {
         implementation(shimmer)
     }
 
-    with(Airbnb){
+    with(Airbnb) {
         implementation(lottie)
     }
 
-    with(Font){
+    with(Font) {
         implementation(calligraphy)
+        implementation(viewPump)
     }
 
-    with(Anko){
+    with(Anko) {
         implementation(anko)
         implementation(common)
         implementation(design)
     }
 
-    with(Testing){
+    with(Testing) {
         testImplementation(junit)
         testImplementation(mockitoCore)
         androidTestImplementation(rules)

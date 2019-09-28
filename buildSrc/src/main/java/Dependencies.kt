@@ -67,9 +67,10 @@ object Version {
     const val lottie = "2.7.0"
 
     /**
-     * chrisjenx
+     * Calligraphy
      */
-    const val calligraphy = "2.3.0"
+    const val calligraphy = "3.1.1"
+    const val viewPump = "2.0.3"
 
     /**
      * Multidex
@@ -92,71 +93,73 @@ object Version {
 }
 
 object Deps {
-    val kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Version.kotlin}"
+    const val kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Version.kotlin}"
 }
 
 object AndroidSupport {
-    val appCompat = "androidx.appcompat:appcompat:${Version.support}"
-    val recyclerview = "androidx.recyclerview:recyclerview:${Version.support}"
-    val cardview = "androidx.cardview:cardview:${Version.support}"
-    val design = "com.google.android.material:material:${Version.support}"
-    val v4 = "androidx.legacy:legacy-support-v4:${Version.support}"
-    val constraintLayout = "androidx.constraintlayout:constraintlayout:${Version.constraintLayout}"
-    val multidex = "com.android.support:multidex:${Version.multidex}"
+    const val appCompat = "androidx.appcompat:appcompat:${Version.support}"
+    const val recyclerview = "androidx.recyclerview:recyclerview:${Version.support}"
+    const val cardview = "androidx.cardview:cardview:${Version.support}"
+    const val design = "com.google.android.material:material:${Version.support}"
+    const val v4 = "androidx.legacy:legacy-support-v4:${Version.support}"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Version.constraintLayout}"
+    const val multidex = "com.android.support:multidex:${Version.multidex}"
+    const val legacy = "androidx.legacy:legacy-support-v4:${Version.support}"
 }
 
 object Retrofit {
-    val retrofit = "com.squareup.retrofit2:retrofit:${Version.retrofit2}"
-    val gsonConverter = "com.squareup.retrofit2:converter-gson:${Version.retrofit2}"
-    val gson = "com.google.code.gson:gson:${Version.gson}"
-    val rxAdapter = "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${Version.rxjavaAdapter}"
-    val okHttpLogging = "com.squareup.okhttp3:logging-interceptor:${Version.okhttpLogging}"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Version.retrofit2}"
+    const val gsonConverter = "com.squareup.retrofit2:converter-gson:${Version.retrofit2}"
+    const val gson = "com.google.code.gson:gson:${Version.gson}"
+    const val rxAdapter = "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${Version.rxjavaAdapter}"
+    const val okHttpLogging = "com.squareup.okhttp3:logging-interceptor:${Version.okhttpLogging}"
 }
 
 object Reactivex {
-    val android = "io.reactivex.rxjava2:rxandroid:${Version.rxandroid}"
-    val java = "io.reactivex.rxjava2:rxjava:${Version.rxjava2}"
+    const val android = "io.reactivex.rxjava2:rxandroid:${Version.rxandroid}"
+    const val java = "io.reactivex.rxjava2:rxjava:${Version.rxjava2}"
 }
 
 object Dagger {
-    val dagger = "com.google.dagger:dagger:${Version.dagger2}"
-    val android = "com.google.dagger:dagger-android:${Version.dagger2}"
-    val androidSupport = "com.google.dagger:dagger-android-support:${Version.dagger2}"
-    val compiler = "com.google.dagger:dagger-compiler:${Version.dagger2}"
-    val processor = "com.google.dagger:dagger-android-processor:${Version.dagger2}"
+    const val dagger = "com.google.dagger:dagger:${Version.dagger2}"
+    const val android = "com.google.dagger:dagger-android:${Version.dagger2}"
+    const val androidSupport = "com.google.dagger:dagger-android-support:${Version.dagger2}"
+    const val compiler = "com.google.dagger:dagger-compiler:${Version.dagger2}"
+    const val processor = "com.google.dagger:dagger-android-processor:${Version.dagger2}"
 }
 
 object Lifecycle {
-    val extentions = "androidx.lifecycle:lifecycle-extensions:${Version.lifecycle}"
+    const val extentions = "androidx.lifecycle:lifecycle-extensions:${Version.lifecycle}"
 }
 
 object Anko {
-    val anko = "org.jetbrains.anko:anko:${Version.anko}"
-    val common = "org.jetbrains.anko:anko-commons:${Version.anko}"
-    val design = "org.jetbrains.anko:anko-design:${Version.anko}"
+    const val anko = "org.jetbrains.anko:anko:${Version.anko}"
+    const val common = "org.jetbrains.anko:anko-commons:${Version.anko}"
+    const val design = "org.jetbrains.anko:anko-design:${Version.anko}"
 }
 
 object Facebook {
-    val shimmer = "com.facebook.shimmer:shimmer:${Version.facebookShimmer}"
+    const val shimmer = "com.facebook.shimmer:shimmer:${Version.facebookShimmer}"
 }
 
 object Airbnb {
-    val lottie = "com.airbnb.android:lottie:${Version.lottie}"
+    const val lottie = "com.airbnb.android:lottie:${Version.lottie}"
 }
 
 object Font {
-    val calligraphy = "uk.co.chrisjenx:calligraphy:${Version.calligraphy}"
+    const val calligraphy = "io.github.inflationx:calligraphy3:${Version.calligraphy}"
+    const val viewPump = "io.github.inflationx:viewpump:${Version.viewPump}"
 }
 
 object Multidex {
-    val multidex = "androidx.multidex:multidex:${Version.multidex}"
+    const val multidex = "androidx.multidex:multidex:${Version.multidex}"
 }
 
 object Testing {
-    val junit = "junit:junit:${Version.junitVersion}"
-    val mockitoCore = "org.mockito:mockito-core:${Version.mockitoCore}"
-    val rules = "androidx.test:rules:${Version.androidxTest}"
-    val runner = "androidx.test:runner:${Version.androidxTest}"
-    val espressoCore = "androidx.test.espresso:espresso-core:${Version.androidxEspressoCore}"
-    val mockitoInline = "org.mockito:mockito-inline:${Version.mockitoInline}"
+    const val junit = "junit:junit:${Version.junitVersion}"
+    const val mockitoCore = "org.mockito:mockito-core:${Version.mockitoCore}"
+    const val rules = "androidx.test:rules:${Version.androidxTest}"
+    const val runner = "androidx.test:runner:${Version.androidxTest}"
+    const val espressoCore = "androidx.test.espresso:espresso-core:${Version.androidxEspressoCore}"
+    const val mockitoInline = "org.mockito:mockito-inline:${Version.mockitoInline}"
 }
